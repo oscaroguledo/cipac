@@ -27,9 +27,9 @@
       <nav class="navbar navbar-expand-md fixed-top d-flex flex-wrap justify-content-center py-3 mb-0 border-bottom bg-light">
         <div class="container-fluid m-0 p-0s">
             <a class="navbar-brand" href="#"><h1>Engineering</h1></a>
-          <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fas fa-bars" onclick="mytoggleicon(this)"></span>
-          </button>
+          <a ondblclick="mytoggleicon()" onclick="mytoggleicon()" class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-bars" id="toggle"></span>
+          </a>
 
           <div class=" collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav ms-auto mb-2 mb-md-0">
@@ -46,7 +46,7 @@
             <span class="m-2">    </span>
             <form class="d-flex ml-1 mr-0 search bg-white" role="search">
               <input class="form-control m-1 enter-search" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline border-0" type="submit"><i class="fas fa-search"></i></button>
+              <button class="btn btn-lg btn-outline search border-0" type="submit"><i class="fas fa-search"></i></button>
             </form>
           </div>
         </div>

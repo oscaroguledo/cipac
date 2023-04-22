@@ -1,6 +1,6 @@
 // When the user clicks on the button, toggle the icon between x and bars
-function mytoggleicon(x) {
-    x.classList.toggle("fa-times");
+function mytoggleicon() {
+    document.getElementById("toggle").classList.toggle("fa-times");
 }
 // Get the button
 let mybutton = document.getElementById("back-to-top");

@@ -86,17 +86,20 @@ input.form-control:focus{
 /*---*/
 }
 
-button.btn{
+a.btn,
+button.search{
    color:#f16434;
    border-radius:0px;
+   border:1px solid #f16434;
 }
-button.btn:hover,
-button.btn:active{
+a.btn:hover,
+a.btn:active,
+button.search:hover,
+button.search:active{
+    border:1px solid #f16434;
     background-color:#f16434;
     color:white;
 }
-
-
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -113,14 +116,14 @@ span.fa-angle-right{
     color:#f16434;
     font-size:50px;
 }
-.btn-primary{
+a.btn-primary{
    background-color:#f16434;
    border-color:#f16434;
    border-radius:0px;
-   background: #f16434;
    transition-duration: 0.4s;
+   color:white;
    }
-.btn-primary:hover{
+a.btn-primary:hover{
   background-color: white;
   color: black;
   border: 2px solid #f16434;
