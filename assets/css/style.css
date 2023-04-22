@@ -78,10 +78,10 @@ form.search{
 input.form-control{
     border:0px;
     border-radius:0px;
+    outline: none !important;
 
 }
 input.form-control:focus{
-    border:1px solid #f16434;
     outline: none !important;
 /*---*/
 }
