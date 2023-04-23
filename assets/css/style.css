@@ -116,14 +116,16 @@ span.fa-angle-right{
     color:#f16434;
     font-size:50px;
 }
-a.btn-primary{
+a.btn-primary,
+button.btn-primary{
    background-color:#f16434;
    border-color:#f16434;
    border-radius:0px;
    transition-duration: 0.4s;
    color:white;
    }
-a.btn-primary:hover{
+a.btn-primary:hover,
+button.btn-primary:hover{
   background-color: white;
   color: black;
   border: 2px solid #f16434;
