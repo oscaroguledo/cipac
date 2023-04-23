@@ -63,7 +63,7 @@ h6 {
 }
 .nav-link:hover{
     background-color:#f16434;
-    border-radius:0px;
+    border-radius:8px;
     border:1px solid #f16434;
 }
 .navbar div.show{
@@ -77,7 +77,7 @@ form.search{
 
 input.form-control{
     border:0px;
-    border-radius:0px;
+    border-radius:8px;
     outline: none !important;
 
 }
@@ -93,7 +93,7 @@ input.form-control:focus {
 a.btn,
 button.search{
    color:#f16434;
-   border-radius:0px;
+   border-radius:8px;
    border:1px solid #f16434;
 }
 a.btn:hover,
@@ -111,6 +111,7 @@ button.search:active{
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
+  height:100%;
 }
 .highlight{
     color:#f16434;/* orange color */
@@ -124,7 +125,7 @@ a.btn-primary,
 button.btn-primary{
    background-color:#f16434;
    border-color:#f16434;
-   border-radius:0px;
+   border-radius:8px;
    transition-duration: 0.4s;
    color:white;
    }
@@ -195,6 +196,15 @@ div.third{
 footer.footer{
     background-color:#3c3b41;/* dark color--- */
 }
+.social-link{
+    font-size:30px;
+    margin:4px;
+    padding:4px;
+   border-radius:8px;
+   border:3px solid transparent;
+   transition-duration: 0.6s;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
