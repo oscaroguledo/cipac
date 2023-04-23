@@ -81,9 +81,13 @@ input.form-control{
     outline: none !important;
 
 }
-input.form-control:focus{
-    outline: none !important;
-/*---*/
+input:focus,
+input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 a.btn,
@@ -141,7 +145,6 @@ button.btn-primary:hover{
 .carousel-item {
   height: 32rem;
 }
-
 
 /* Featurettes
 ------------------------- */
