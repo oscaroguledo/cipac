@@ -60,6 +60,7 @@ h6 {
   color:Grey;
 }
 
+
 .nav-link:hover{
     background-color:#f16434;
     border-radius:8px;
@@ -103,6 +104,15 @@ button.search:active{
     border:1px solid #f16434;
     background-color:#f16434;
     color:white;
+}
+h1.text-small{
+    font-size:20px;
+}
+p.text-small{
+    font-size:15px;
+}
+.logo{
+    height:30px;
 }
 
 /* CUSTOMIZE THE CAROUSEL
