@@ -1,8 +1,8 @@
 import React, { useState , useEffect } from 'react';
-import team1 from '../img/people/team-1.jpg';
-import team2 from '../img/people/team-2.jpg';
-import team3 from '../img/people/team-3.jpg';
-import team4 from '../img/people/team-4.jpg';
+import team1 from '../media/people/team-1.jpg';
+import team2 from '../media/people/team-2.jpg';
+import team3 from '../media/people/team-3.jpg';
+import team4 from '../media/people/team-4.jpg';
 
 
 function About() {
