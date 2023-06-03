@@ -35,7 +35,7 @@ function About() {
                         At CIPAC Engineering, we understand that successful projects are built on collaboration and strong relationships. We work closely with our clients, listening to their unique requirements, 
                         and tailoring our solutions to meet their specific needs. We believe in open communication, transparency, and a partnership approach, ensuring that our clients are involved at every stage of the project.
                         When you choose CIPAC Engineering, you choose a trusted partner committed to delivering excellence. We are ready to embark on your next engineering journey, transforming ideas into reality and building the future together.</p>
-                        <a href="#" className="btn btn-primary">Learn More <i className="bi bi-chevron-double-right"></i></a>
+                        <a href="/" className="btn btn-primary">Learn More <i className="bi bi-chevron-double-right"></i></a>
                     </div>
                     </div>
 
@@ -120,10 +120,10 @@ function About() {
                             <span>Nwokoye Henry</span>
                             <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                             <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""> <i className="bi bi-linkedin"></i> </a>
+                            <a href="/"><i className="bi bi-twitter"></i></a>
+                            <a href="/"><i className="bi bi-facebook"></i></a>
+                            <a href="/"><i className="bi bi-instagram"></i></a>
+                            <a href="/"> <i className="bi bi-linkedin"></i> </a>
                             </div>
                         </div>
                         </div>
@@ -138,10 +138,10 @@ function About() {
                             <span>Product Manager</span>
                             <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                             <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""> <i className="bi bi-linkedin-box"></i> </a>
+                            <a href="/"><i className="bi bi-twitter"></i></a>
+                            <a href="/"><i className="bi bi-facebook"></i></a>
+                            <a href="/"><i className="bi bi-instagram"></i></a>
+                            <a href="/"> <i className="bi bi-linkedin-box"></i> </a>
                             </div>
                         </div>
                         </div>
@@ -156,10 +156,10 @@ function About() {
                             <span>CTO</span>
                             <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                             <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""> <i className="bi bi-linkedin"></i> </a>
+                            <a href="/"><i className="bi bi-twitter"></i></a>
+                            <a href="/"><i className="bi bi-facebook"></i></a>
+                            <a href="/"><i className="bi bi-instagram"></i></a>
+                            <a href="/"> <i className="bi bi-linkedin"></i> </a>
                             </div>
                         </div>
                         </div>
@@ -174,10 +174,10 @@ function About() {
                             <span>Accountant</span>
                             <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                             <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""> <i className="bi bi-linkedin"></i> </a>
+                            <a href="/"><i className="bi bi-twitter"></i></a>
+                            <a href="/"><i className="bi bi-facebook"></i></a>
+                            <a href="/"><i className="bi bi-instagram"></i></a>
+                            <a href="/"> <i className="bi bi-linkedin"></i> </a>
                             </div>
                         </div>
                         </div>

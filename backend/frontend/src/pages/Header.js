@@ -2,7 +2,7 @@ import React from 'react';
 //import { render } from "react-dom";
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 
-import cipaclogo from '../media/cipaclogo.svg';
+// import cipaclogo from '../media/cipaclogo.svg';
 //console.log(cipaclogo)
 
 
@@ -11,18 +11,18 @@ function mytoggleicon() {
     document.getElementById("toggle").classList.toggle("bi-x-lg");
 }
 function Header() {  
-    let ActiveLink = 'active';
+    // let ActiveLink = 'active';
     
     return(
         <header className="app-header">
             <nav className="navbar navbar-expand-md fixed-top d-flex flex-wrap justify-content-center py-3 mb-0 border-bottom">
             <div className="container-fluid m-0 p-0s">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                 <h1>
-                    <img className="bd-placeholder-img logo" src={cipaclogo} aria-hidden="true" />
+                    {/* <img className="bd-placeholder-img logo" src={cipaclogo} aria-hidden="true" alt='' /> */}
                 </h1>
                 </a>
-            <a onDoubleClick={mytoggleicon} onClick={mytoggleicon} className="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <a href='/' onDoubleClick={mytoggleicon} onClick={mytoggleicon} className="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >
                 <span className="bi bi-list ms-auto" id="toggle"></span>
             </a>
 
@@ -32,7 +32,7 @@ function Header() {
                         <Link to="/" className='nav-link'>Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/About" className="nav-link">About</Link>
+                        <Link to="/About" className="nav-link">About</Link> 
                     </li>
                     <li className="nav-item">
                         <Link to="/Services" className='nav-link'>Services</Link>

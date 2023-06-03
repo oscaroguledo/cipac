@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 function Footer() {
     useEffect(() => {
@@ -16,8 +16,8 @@ function Footer() {
                     <ul className="nav flex-column">
                         <li className="nav-item mb-2"><Link to="/" className='nav-link'>Home</Link></li>
                         <li className="nav-item mb-2"><Link to="/Services" className='nav-link'>Services</Link></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link">Store</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link">FAQs</a></li>
+                        <li className="nav-item mb-2"><a href="/" className="nav-link">Store</a></li>
+                        <li className="nav-item mb-2"><a href="/" className="nav-link">FAQs</a></li>
                     </ul>
                     </div>
 
@@ -25,7 +25,7 @@ function Footer() {
                     <h5 className="highlight m-3">Extras</h5>
                     <ul className="nav flex-column">
                         <li className="nav-item mb-2"><Link to="/Engineers" className='nav-link'>Find Engineers</Link></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link">subsidiries</a></li>
+                        <li className="nav-item mb-2"><a href="/" className="nav-link">subsidiries</a></li>
                         <li className="nav-item mb-2"><Link to="/Contact" className='nav-link'>Contact Us</Link></li>
                         <li className="nav-item mb-2"><Link to="/About" className='nav-link'>About</Link></li>
                     </ul>
@@ -43,12 +43,12 @@ function Footer() {
                         </div>
                     </form>
                     <ul className="nav flex-row d-flex p-2">
-                        <li className="nav-item mb-2"><a href="#" className="social-link"><i className="bi bi-twitter m-2"></i></a></li>
-                        <li className="nav-item mb-2"><a href="#" className="social-link"><i className="bi bi-facebook m-2"></i></a></li>
-                        <li className="nav-item mb-2"><a href="#" className="social-link"><i className="bi bi-whatsapp m-2"></i></a></li>
-                        <li className="nav-item mb-2"><a href="#" className="social-link"><i className="bi bi-linkedin"></i></a></li>
-                        <li className="nav-item mb-2"><a href="#" className="social-link"><i className="bi bi-instagram"></i></a></li>
-                        <li className="nav-item mb-2"><a href="#" className="social-link p-0"><i className="bi bi-telegram m-2"></i></a></li>
+                        <li className="nav-item mb-2"><a href="/" className="social-link"><i className="bi bi-twitter m-2"></i></a></li>
+                        <li className="nav-item mb-2"><a href="/" className="social-link"><i className="bi bi-facebook m-2"></i></a></li>
+                        <li className="nav-item mb-2"><a href="/" className="social-link"><i className="bi bi-whatsapp m-2"></i></a></li>
+                        <li className="nav-item mb-2"><a href="/" className="social-link"><i className="bi bi-linkedin"></i></a></li>
+                        <li className="nav-item mb-2"><a href="/" className="social-link"><i className="bi bi-instagram"></i></a></li>
+                        <li className="nav-item mb-2"><a href="/" className="social-link p-0"><i className="bi bi-telegram m-2"></i></a></li>
                     </ul>
                     </div>
                 </div>
@@ -58,13 +58,13 @@ function Footer() {
 
                 </div>
             </footer>
-            <a href="#" id="back-to-top" className="rounded-3 back-to-top float-right" onClick={() => {
+            <a href="/" id="back-to-top" className="rounded-3 back-to-top float-right" onClick={() => {
                 window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
                 }} 
                 >
             <i className="bi bi-arrow-up-short ms-auto"></i>
             </a>
-            <a href="#" className="back-to-top active rounded-3 d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
+            <a href="/" className="back-to-top active rounded-3 d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
 
             
         </div>
