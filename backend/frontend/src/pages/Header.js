@@ -1,8 +1,8 @@
 import React from 'react';
 //import { render } from "react-dom";
-import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-// import cipaclogo from '../media/cipaclogo.svg';
+import cipaclogo from '../media/cipaclogo.svg';
 //console.log(cipaclogo)
 
 
@@ -10,6 +10,7 @@ function mytoggleicon() {
     // toggle btn icon change;
     document.getElementById("toggle").classList.toggle("bi-x-lg");
 }
+
 function Header() {  
     // let ActiveLink = 'active';
     
@@ -19,12 +20,12 @@ function Header() {
             <div className="container-fluid m-0 p-0s">
                 <a className="navbar-brand" href="/">
                 <h1>
-                    {/* <img className="bd-placeholder-img logo" src={cipaclogo} aria-hidden="true" alt='' /> */}
+                    <img className="bd-placeholder-img logo" src={cipaclogo} aria-hidden="true" alt='' />
                 </h1>
                 </a>
-            <a href='/' onDoubleClick={mytoggleicon} onClick={mytoggleicon} className="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >
+            <button href='/' onDoubleClick={mytoggleicon} onClick={mytoggleicon} className="navbar-toggler btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >
                 <span className="bi bi-list ms-auto" id="toggle"></span>
-            </a>
+            </button>
 
             <div className=" collapse navbar-collapse" id="navbarCollapse">
                 <ul className="navbar-nav ms-auto mb-2 mb-md-0">
@@ -46,8 +47,8 @@ function Header() {
                 </ul>
                 <span className="m-2">    </span>
                 <form className="d-flex ml-1 mr-0 search bg-white" role="search">
-                <input className="form-control m-1 enter-search" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-lg btn-outline search border-0 text-dark" type="submit"><i className="bi bi-search"></i></button>
+                    <input className="form-control m-1 enter-search" type="search" placeholder="Search" aria-label="Search" />
+                    <button className="btn btn-outline search border-0 text-dark" type="submit"><i className="bi bi-search"></i></button>
                 </form>
             </div>
             </div>

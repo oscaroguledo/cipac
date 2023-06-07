@@ -1,12 +1,14 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-import { Link} from 'react-router-dom';
+function backtotop(){
+    // 👇️ scroll to top of page
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    console.log(window.top)
+    }
 
 function Footer() {
-    useEffect(() => {
-        // 👇️ scroll to top on page load
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-      }, []);
+    //useEffect(backtotop, []);
     return(
         <div className="app-footer">
             <footer className="container-fluid footer">
@@ -58,13 +60,9 @@ function Footer() {
 
                 </div>
             </footer>
-            <a href="/" id="back-to-top" className="rounded-3 back-to-top float-right" onClick={() => {
-                window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-                }} 
-                >
-            <i className="bi bi-arrow-up-short ms-auto"></i>
-            </a>
-            <a href="/" className="back-to-top active rounded-3 d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
+            <button  onClick={backtotop} className="back-to-top active rounded-3 d-flex align-items-center justify-content-center">
+                <i className="bi bi-arrow-up-short"></i>
+            </button>
 
             
         </div>
