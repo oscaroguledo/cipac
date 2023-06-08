@@ -3,17 +3,34 @@ import team1 from '../media/people/team-1.jpg';
 import team2 from '../media/people/team-2.jpg';
 import team3 from '../media/people/team-3.jpg';
 import team4 from '../media/people/team-4.jpg';
+import axios from 'axios';
 
-
-function About() {
+export default class About extends React.Component {
+    state = {
+        about: []
+      }
     
+      componentDidMount() {
+        axios.get(`http://127.0.0.1:8000/about/`)
+          .then(res => {
+            const about = res.data;
+            console.log(about+'====')
+            this.setState({ about });
+          })
+      }
+
+    render(){
+
     return (
         <div className='about mt-4'>
             <section id="about" className="about">
                 <div className="container" data-aos="fade-up">
 
                     <div className="section-title mt-4">
-                    <h2>About Us</h2>
+                    {
+                    this.state.about.map(about =><h2 key=''>About {about.company_name}</h2>)
+                    }
+                    
                     </div>
 
                     <div className="row content">
@@ -192,4 +209,5 @@ function About() {
     )
 }
 
-export default About
+        
+}

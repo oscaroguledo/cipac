@@ -99,12 +99,8 @@ form.search{
    color:#F7DF0D;
    border-radius:20px;
    border:1px solid #F7DF0D;
-   height:50px;
+   
 }
-button.search{
-    
-    font-size: 2px;
- }
 
 input.form-control{
     border:0px;
@@ -121,21 +117,24 @@ input.form-control:focus {
     -webkit-box-shadow: none;
 }
 a.btn,
-button.btn{
+button.btn,
+button.btn:focus,
+button.btn:active{
   color:white;
   font-size: 40px;
-  border:0px
+  border:0px;
+  
 }
 a.btn:hover{
   border:0px solid #F7DF0D;
   border-radius:20px;
   color:white;
 }
-
 button.search{
     border-radius:20px;
     border:1px solid #F7DF0D;
- }
+    font-size:large;
+}
 button.search:hover{
     border:1px solid #F7DF0D;
     border-radius:20px;
@@ -163,6 +162,9 @@ button.btn-primary:hover{
   color: black;
   border: 2px solid #F7DF0D;
 }
+.carousel-caption{
+  display: inline-block;
+}
 /* swiper in carousel content
 -------------------------------------------------- */
 
@@ -171,7 +173,7 @@ button.btn-primary:hover{
   height: 100%;
 }
 .mySwiper {
-  margin: top 70px;
+  margin-top: 2px;
 }
 
 .swiper-slide {
@@ -182,7 +184,7 @@ button.btn-primary:hover{
   justify-content: center;
   align-items: center;
   width:100%;
-  height:500px;
+  height:80px;
 }
 
 .swiper-slide img {
@@ -190,14 +192,14 @@ button.btn-primary:hover{
   width: 100%;
   height: 100%;
   opacity:0.9;
-  object-fit: cover;
+  object-fit:fill;
 }
 .swiper-button-next,
 .swiper-button-prev{
-    color:#F7DF0D;
+    color:#F7DF0D !important;
 }
 .swiper-pagination-bullet-active{
-    color:#F7DF0D;
+    color:#1E1E1E !important;
 }
 /* END OF THE CAROUSEL CONTENT
 -------------------------------------------------- */
@@ -213,8 +215,10 @@ button.btn-primary:hover{
 
 /* Thin out the marketing headings */
 /* rtl:begin:remove */
-.featurette-heading {
-  letter-spacing: -.05rem;
+.f-heading{
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* rtl:end:remove */
@@ -238,6 +242,9 @@ button.btn-primary:hover{
 /*---persons------*/
 div.third{
     background-color: #ffdbc4;
+}
+.persons{
+  box-shadow:0 0 5px #cbd6e9;
 }
 /*--------------------------------------------------------------
 # Back to top button
@@ -465,12 +472,19 @@ section {
   .why-us .accordion-list {
     padding-bottom: 30px;
   }
+  .mySwiper {
+    margin-top: 100px;
+  }
 }
 
 @media (max-width: 575px) {
   .why-us .img {
     min-height: 200px;
   }
+  .mySwiper {
+    margin-top: 95px;
+  }
+  
 }
 
 
@@ -634,12 +648,15 @@ section {
   .featurette-heading {
     font-size: 50px;
   }
+  
+  
 }
 
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
   }
+  
 }
 
 

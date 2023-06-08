@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "http-proxy-middleware": "^2.0.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^17.0.2",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.3",
-    "@types/react-router-dom": "^5.3.3"
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.4.0"
   }
 }
