@@ -27,7 +27,6 @@ class getAbout(APIView):
                     "slogan": About.objects.all().first().slogan,
                     "email": About.objects.all().first().email,
                     "phone": About.objects.all().first().phone,
-                    "history": About.objects.all().first().history,
                     "address": About.objects.all().first().address}
         #print(detail)
         #return Response(detail, status=status.HTTP_200_OK)

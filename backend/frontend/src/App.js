@@ -7,7 +7,7 @@ import Header from "./pages/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Engineers from "./pages/Engineers";
+import Store from "./pages/Store";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 
@@ -17,10 +17,10 @@ function App() {
           <Header />
           <Routes>
               <Route exact path="/" element={<Home/>} > </Route>
-              <Route exact path="/About" element={<About/>} ></Route>
-              <Route exact path="/Services" element={<Services/>} ></Route>
-              <Route exact path="/Engineers" element={<Engineers/>} ></Route>
-              <Route exact path="/Contact" element={<Contact/>} ></Route>
+              <Route exact path="/about" element={<About/>} ></Route>
+              <Route exact path="/services" element={<Services/>} ></Route>
+              <Route exact path="/store" element={<Store/>} ></Route>
+              <Route exact path="/contact" element={<Contact/>} ></Route>
           </Routes>
           <Footer />
       </Router>
