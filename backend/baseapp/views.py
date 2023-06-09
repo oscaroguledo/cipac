@@ -7,8 +7,8 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status, generics, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from . models import *
-from .serializers import *
+from . models import About, Service
+from .serializers import AboutSerializer, ServiceSerializer
 
 
 # Create your views here.
@@ -24,10 +24,7 @@ class getAbout(APIView):
                     "history": About.objects.all().first().history,
                     "about": About.objects.all().first().about,
                     "motto": About.objects.all().first().motto,
-                    "slogan": About.objects.all().first().slogan,
-                    "email": About.objects.all().first().email,
-                    "phone": About.objects.all().first().phone,
-                    "address": About.objects.all().first().address}
+                    "slogan": About.objects.all().first().slogan}
         #print(detail)
         #return Response(detail, status=status.HTTP_200_OK)
         if detail:
@@ -79,3 +76,23 @@ class editAbout(APIView):
 ##about api ends here----------------------------------------------------------
 class ServiceView(APIView):
     serializer_class  = ServiceSerializer
+
+##contactus api starts here----------------------------------------------------------
+@method_decorator(csrf_exempt, name='dispatch')
+class getContact(APIView): 
+    serializer_class = AboutSerializer
+    def get(self, request):
+        detail = {"company_name": About.objects.all().first().company_name,
+                    "email": About.objects.all().first().email,
+                    "phone": About.objects.all().first().phone,
+                    "address": About.objects.all().first().address}
+        #print(detail)
+        if detail:
+            return Response({"message": "Contact Page details.", "response": detail},
+                            status=status.HTTP_200_OK)
+        else:
+            return Response({"message": "There is no detail", "response": detail},
+                            status=status.HTTP_204_NO_CONTENT)
+ 
+
+##contactus api ends here----------------------------------------------------------

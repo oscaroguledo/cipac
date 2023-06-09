@@ -116,7 +116,7 @@ export default class About extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-5 align-items-stretch order-1 order-lg-2 img why-us-div" data-aos="zoom-in" data-aos-delay="150">&nbsp;
+                            <div className="col-lg-5 align-items-stretch order-1 order-lg-2 img why-us-div" data-aos="zoom-in" data-aos-delay="150" loading="lazy">&nbsp;
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@ export default class About extends React.Component {
                         <div className="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
                             <div className="member d-flex align-items-start">
                             <div className="pic">
-                                <img src={team1} className="img-fluid" alt=""/></div>
+                                <img src={team1} className="img-fluid" loading="lazy" alt=""/></div>
                             <div className="member-info">
                                 <h4>Walter White</h4>
                                 <span>Nwokoye Henry</span>
@@ -154,7 +154,7 @@ export default class About extends React.Component {
                         <div className="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
                             <div className="member d-flex align-items-start">
                             <div className="pic">
-                                <img src={team2} className="img-fluid" alt="" /></div>
+                                <img src={team2} className="img-fluid" loading="lazy" alt="" /></div>
                             <div className="member-info">
                                 <h4>Oguledo Oscar</h4>
                                 <span>Product Manager</span>
@@ -172,7 +172,7 @@ export default class About extends React.Component {
                         <div className="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
                             <div className="member d-flex align-items-start">
                             <div className="pic">
-                                <img src={team3} className="img-fluid" alt="" /></div>
+                                <img src={team3} className="img-fluid" loading="lazy" alt="" /></div>
                             <div className="member-info">
                                 <h4>Okeke Kosisochukwu</h4>
                                 <span>CTO</span>
@@ -190,7 +190,7 @@ export default class About extends React.Component {
                         <div className="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
                             <div className="member d-flex align-items-start">
                             <div className="pic">
-                                <img src={team4} className="img-fluid" alt="" /></div>
+                                <img src={team4} className="img-fluid" loading="lazy" alt="" /></div>
                             <div className="member-info">
                                 <h4>Amanda Jepson</h4>
                                 <span>Accountant</span>

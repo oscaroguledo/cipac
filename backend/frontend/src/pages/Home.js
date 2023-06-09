@@ -96,26 +96,26 @@ function Main() {
                         <p><a className="btn btn-primary" href="/About">Read More  <i className="bi bi-chevron-double-right"></i></a></p>
                     </div>
                     <div className="col-md-4 img float-right">
-                        <a href='/About'><img className="bd-placeholder-img-lg featurette-image img-fluid ms-auto" width="500px" height="500px" src={pic3} alt=""  aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" /></a>
+                        <a href='/About'><img className="bd-placeholder-img-lg featurette-image img-fluid ms-auto" width="500px" height="500px" loading="lazy" src={pic3} alt=""  aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" /></a>
                     </div>
                 </div>
                 <hr className="featurette-divider" />
                 <div className="row persons p-1 pt-4">
                     <div className="col-lg-4">
-                        <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={pic9} alt=""  aria-label="Placeholder: 500x500" />
+                        <img className="bd-placeholder-img rounded-circle" width="140" height="140" loading="lazy" src={pic9} alt=""  aria-label="Placeholder: 500x500" />
 
                         <h2 className="fw-normal">Store</h2>
                         <p>We offer a wide range of products and supplies necessary for engineering projects, research, and development</p>
                         <p><a className="btn btn-primary" href="/">Explore</a></p>
                     </div>
                     <div className="col-lg-4">
-                        <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={{pic12}} alt=""  aria-label="Placeholder: 500x500" />
+                        <img className="bd-placeholder-img rounded-circle" width="140" height="140" loading="lazy" src={{pic12}} alt=""  aria-label="Placeholder: 500x500" />
                         <h2 className="fw-normal">About</h2>
                         <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
                         <p><a className="btn btn-primary" href="/">View</a></p>
                     </div>
                     <div className="col-lg-4">
-                        <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={pic11} alt=""  aria-label="Placeholder: 500x500" />
+                        <img className="bd-placeholder-img rounded-circle" width="140" height="140" loading="lazy" src={pic11} alt=""  aria-label="Placeholder: 500x500" />
                         <h2 className="fw-normal">Services</h2>
                         <p>Our services encompass a broad range of activities that involve installation, sales and supply and consultancy.</p>
                         <p><a className="btn btn-primary" href="/">View services</a></p>
@@ -133,7 +133,7 @@ function Main() {
                     <p className="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
                 </div>
                 <div className="col-md-5 img">
-                    <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src={pic10} alt=""  aria-label="Placeholder: 500x500" focusable="false" />
+                    <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" loading="lazy" src={pic10} alt=""  aria-label="Placeholder: 500x500" focusable="false" />
                 </div>
                 </div>
 
@@ -145,7 +145,7 @@ function Main() {
                         <p className="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
                     </div>
                     <div className="col-md-5">
-                        <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src={pic8} alt="" aria-label="Placeholder: 500x500" focusable="false" />
+                        <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" loading="lazy" src={pic8} alt="" aria-label="Placeholder: 500x500" focusable="false" />
                     </div>
                 </div>
 

@@ -87,14 +87,29 @@ p.text-small{
   border-radius:12px;
   border:1px solid transparent;
 }
-
 .nav-link:hover,
 .nav-link:active{
     background-color:#F7DF0D;
     border-radius:12px;
     border:1px solid #F7DF0D;
 }
-
+button.nav-link{
+  color: white;
+  margin: 1px;
+  border-radius:50px;
+  border:1px solid transparent;
+  
+  background-color:transparent;
+}
+button.nav-link::after{
+  color:white;
+}
+button.nav-link:hover,
+button.nav-link:active{
+    background-color:transparent;
+    border-radius:50px;
+    border:1px solid transparent;
+}
 form.search{
    color:#F7DF0D;
    border-radius:20px;
