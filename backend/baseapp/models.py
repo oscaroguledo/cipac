@@ -22,12 +22,3 @@ class About(models.Model):
             raise IndexError('There is can be only one instance About the company')
         return super(About, self).save(*args, **kwargs)
 
-## service model--------------------------------------
-class Service(models.Model):
-    name = models.CharField(verbose_name="Name of the Service", max_length=225)
-    region = models.CharField(verbose_name="Region of service", max_length=225,null=True, blank=True)
-    description = models.CharField(verbose_name="Description of the Service", max_length=225,null=True, blank=True)
-    
-    def __str__(self) -> str:
-        return self.name
-

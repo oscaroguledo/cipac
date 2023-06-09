@@ -1,7 +1,7 @@
 ### Backend services version 2 for app view
 
 ### about view-------------------------------------------------
-_Post_ to `about/`
+_Post_ to `post_about`
 
 - Request Body
 
@@ -38,7 +38,7 @@ _Post_ to `about/`
 }
 ```
 
-_Patch_ to `edit_about/`
+_Patch_ to `edit_about`
 
 - Request Body
 
@@ -85,5 +85,42 @@ _Patch_ to `edit_about/`
 ```json
 {
     "error": "This about model does not exist"
+}
+```
+
+_Get_ to `about`
+
+- Response 200
+
+```json
+{
+  "message": "About Page details.", 
+  "response": "detail"
+}
+```
+- Response 204
+
+```json
+{
+  "message": "There is no detail", 
+  "response": "detail"
+}
+```
+_Get_ to `contact`
+
+- Response 200
+
+```json
+{
+  "message": "Contact Page details.", 
+  "response": "detail"
+}
+```
+- Response 204
+
+```json
+{
+  "message": "There is no detail", 
+  "response": "detail"
 }
 ```

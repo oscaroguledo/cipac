@@ -127,9 +127,18 @@ input.form-control{
     outline: none !important;
     height: 50px; 
 }
+textarea.form-control{
+  border:1px solid transparent;
+  border-radius:20px;
+  outline: none !important;
+  height: 130px; 
+}
 input:focus,
 input.form-control:active,
-input.form-control:focus {
+input.form-control:focus, 
+textarea.focus,
+textarea.form-control:active,
+textarea.form-control:focus{
     outline:none !important;
     outline-width: 0 !important;
     box-shadow: none;

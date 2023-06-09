@@ -86,12 +86,12 @@ export default class Contact extends React.Component {
                                     </div>
                                     <div className="row">
                                     <div className="col-md-12 form-group p-2">
-                                        <input type="text" class="form-control" name="email" id="email" placeholder="Email" />
+                                        <input type="text" className="form-control" name="email" id="email" placeholder="Email" />
                                     </div>
                                     </div>
                                     <div className="row">
                                     <div className="col-md-12 form-group p-2">
-                                        <input className="text" class="form-control" name="subject" id="subject" placeholder="Subject" />
+                                        <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" />
                                     </div>
                                     </div>
                                     <div className="row">
@@ -106,11 +106,6 @@ export default class Contact extends React.Component {
                                     </div>
                                     </div>
                                 </form>
-
-                                <div id="form-message-warning mt-4"></div> 
-                                <div id="form-message-success">
-                                    Your message was sent, thank you!
-                                </div>
                                 </div>
                         </div>
                     </div>

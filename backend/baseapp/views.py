@@ -7,8 +7,8 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status, generics, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from . models import About, Service
-from .serializers import AboutSerializer, ServiceSerializer
+from . models import About
+from .serializers import AboutSerializer
 
 
 # Create your views here.
@@ -72,10 +72,6 @@ class editAbout(APIView):
                                 status=status.HTTP_200_OK)
         else:
             return Response({"message": "failed to update about page details"}, status=status.HTTP_304_NOT_MODIFIED)
-
-##about api ends here----------------------------------------------------------
-class ServiceView(APIView):
-    serializer_class  = ServiceSerializer
 
 ##contactus api starts here----------------------------------------------------------
 @method_decorator(csrf_exempt, name='dispatch')
