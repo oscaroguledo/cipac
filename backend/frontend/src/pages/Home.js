@@ -48,7 +48,7 @@ function Main() {
                             <div className="carousel-caption text-start">
                                 <h1 className="text-small">Ordering, supply and installation processes</h1>
                                 <p className="text-small"> Easier and more convenient.</p>
-                                <p><a className="btn btn-sm btn-primary" href="/">Browse gallery <i className="bi bi-chevron-double-right"></i></a></p>
+                                <p><a className="btn btn-sm btn-primary" href="/">Browse gallery <i className="fa-solid fa-angles-right"></i></a></p>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ function Main() {
                             <div className="carousel-caption text-start">
                             <h1 className="text-small">Ordering, supply and installation processes</h1>
                             <p className="text-small"> Easier and more convenient.</p>
-                            <p><a className="btn btn-primary " href="/">Browse gallery <i className="bi bi-chevron-double-right"></i></a></p>
+                            <p><a className="btn btn-primary " href="/">Browse gallery <i className="fa-solid fa-angles-right"></i></a></p>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ function Main() {
                             <div className="carousel-caption text-start">
                             <h1 className="text-small">Ordering, supply and installation processes</h1>
                             <p className="text-small"> Easier and more convenient.</p>
-                            <p><a className="btn btn-primary " href="/">Browse gallery <i className="bi bi-chevron-double-right"></i></a></p>
+                            <p><a className="btn btn-primary " href="/">Browse gallery <i className="fa-solid fa-angles-right"></i></a></p>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ function Main() {
                         At CIPAC Engineering, we are driven by a relentless passion for engineering excellence. As a leading engineering firm, 
                         we specialize in providing innovative solutions for a wide range of industries, delivering exceptional results that exceed our clients' expectations. 
                         We take pride in our ability to deliver ...</p>
-                        <p><a className="btn btn-primary" href="/About">Read More  <i className="bi bi-chevron-double-right"></i></a></p>
+                        <p><a className="btn btn-primary" href="/About">Read More  <i className="fa-solid fa-angles-right"></i></a></p>
                     </div>
                     <div className="col-md-4 img float-right">
                         <a href='/About'><img className="bd-placeholder-img-lg featurette-image img-fluid ms-auto" width="500px" height="500px" loading="lazy" src={pic3} alt=""  aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" /></a>

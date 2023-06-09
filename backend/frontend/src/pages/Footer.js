@@ -62,7 +62,7 @@ function Footer() {
                 </div>
             </footer>
             <button  onClick={backtotop} className="back-to-top active rounded-3 d-flex align-items-center justify-content-center">
-                <i className="bi bi-arrow-up-short"></i>
+                <i class="fa-solid fa-arrow-up"></i>
             </button>
 
             

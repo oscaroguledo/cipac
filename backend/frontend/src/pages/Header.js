@@ -28,23 +28,23 @@ function Header() {
                     </button>
 
                     <div className=" collapse navbar-collapse" id="navbarCollapse">
-                        <ul className="navbar-nav ms-auto mb-2 mb-md-0 align-items-center">
-                            <li className="nav-item">
-                                <Link to="/" className='nav-link'>Home</Link>
+                        <ul className="navbar-nav ms-auto mb-2 mb-md-0 p-2">
+                            <li className="nav-item p-1">
+                                <Link to="/" className='nav-link'> Home</Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item p-1">
                                 <Link to="/about" className="nav-link">About</Link> 
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item p-1">
                                 <Link to="/services" className='nav-link'>Services</Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item p-1">
                                 <Link to="/store" className='nav-link'>Store</Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item p-1">
                                 <Link to="/contact" className='nav-link'>Contact Us</Link>
                             </li>
-                            <li className="nav-item dropdown">
+                            <li className="nav-item dropdown p-1">
                                 <button className="nav-link button dropdown-toggle d-flex align-items-center p-0" id="navbarDropdownMenuLink"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" className="img rounded-circle"

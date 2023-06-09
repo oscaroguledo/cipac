@@ -13,7 +13,7 @@ export default class About extends React.Component {
     
       componentDidMount() {
         let data;
-        axios.get(`http://127.0.0.1:8000/about/`)
+        axios.get(`http://127.0.0.1:8000/about`)
           .then(res => {
             data = res.data;
             this.setState(
@@ -136,7 +136,8 @@ export default class About extends React.Component {
                         <div className="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
                             <div className="member d-flex align-items-start">
                             <div className="pic">
-                                <img src={team1} className="img-fluid" loading="lazy" alt=""/></div>
+                                <img src={team1} className="img-fluid" loading="lazy" alt=""/>
+                            </div>
                             <div className="member-info">
                                 <h4>Walter White</h4>
                                 <span>Nwokoye Henry</span>

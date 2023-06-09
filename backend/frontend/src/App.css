@@ -116,21 +116,28 @@ form.search{
    border:1px solid #F7DF0D;
    
 }
+.form{
+  box-shadow:0 0 5px #cbd6e9;
+  background-color: #f7fbeD;
+}
 
 input.form-control{
-    border:0px;
+    border:1px solid transparent;
     border-radius:20px;
     outline: none !important;
-
+    height: 50px; 
 }
 input:focus,
+input.form-control:active,
 input.form-control:focus {
     outline:none !important;
     outline-width: 0 !important;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    border:1px solid #F7DF0D;
 }
+
 a.btn,
 button.btn,
 button.btn:focus,
@@ -163,6 +170,7 @@ button.search:hover{
 }
 
 a.btn-primary,
+div.icon,
 button.btn-primary{
    background-color:#F7DF0D;
    border-radius:20px;
@@ -172,6 +180,7 @@ button.btn-primary{
    color:#1E1E1E;
    }
 a.btn-primary:hover,
+div.icon:hover,
 button.btn-primary:hover{
   background-color: white;
   color: black;
@@ -256,7 +265,8 @@ button.btn-primary:hover{
 
 /*---persons------*/
 div.third{
-    background-color: #ffdbc4;
+  box-shadow:0 0 5px #cbd6e9;
+    background-color: #f7fbeD;
 }
 .persons{
   box-shadow:0 0 5px #cbd6e9;
@@ -499,7 +509,6 @@ section {
   .mySwiper {
     margin-top: 95px;
   }
-  
 }
 
 

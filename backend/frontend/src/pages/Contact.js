@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import undraw_contact from '../media/tech/undraw-contact.png';
 
 export default class Contact extends React.Component {
     state = {
-        about: [],
+        contact: [],
         message:""
       }
     
@@ -14,7 +15,7 @@ export default class Contact extends React.Component {
             data = res.data;
             this.setState(
                 { 
-                    about:[data.response],
+                    contact:[data.response],
                     message:data.message
                 }
             );
@@ -29,24 +30,88 @@ export default class Contact extends React.Component {
                         <div className="section-title mt-4">
                             <h2>Contact Us</h2>
                         </div>
-                        <div className="row content">
-                            <div className="col-lg-6">
-                            {
-                            this.state.about.map(about =>
-                                <p className='d-flex justify-content-between' key=''>
-                                    {about.email}   
-                                </p>)
-                            }
+                        <div className="row content justify-content-center">
+                            <div className="col-md-6">
+                                <h3 className="heading mb-4">Let's talk about everything!</h3>
+                                <div className="row">
+                                    <div className="col-md-3">
+                                        <div className="dbox w-100 text-center">
+                                            <div className="icon p-1 d-flex align-items-center justify-content-center">
+                                                <span className="fas fa-location-dot"></span>
+                                            </div>
+                                            <div className="text">
+                                                {this.state.contact.map(contact =><p key=''>{contact.address}</p>)}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <div className="dbox w-100 text-center">
+                                            <div class="icon p-1 d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-phone"></span>
+                                            </div>
+                                            <div class="text">
+                                                {this.state.contact.map(contact =><p key=''>{contact.phone}</p>)}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="dbox w-100 text-center">
+                                            <div class="icon p-1 d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-paper-plane"></span>
+                                            </div>
+                                            <div class="text">
+                                                {this.state.contact.map(contact =><p key=''>{contact.email}</p>)}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="dbox w-100 text-center">
+                                            <div class="icon p-1 d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-globe"></span>
+                                            </div>
+                                            <div class="text">
+                                                {this.state.contact.map(contact =><p key=''>{contact.company_name}</p>)}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><img src={undraw_contact} alt="contact_img" className="img-fluid" height="300px" /></p>
                             </div>
-                            <div className="col-lg-6 pt-4 pt-lg-0">
-                                <h5> Brief history of the company</h5>
-                                {
-                                this.state.about.map(about =>
-                                    <p className='d-flex justify-content-between' key=''>
-                                        {about.address}
-                                    </p>)
-                                }
-                            </div>
+                            <div className="col-md-6 form">
+                                <form className="mb-5" method="post" id="contactForm" name="contactForm">
+                                    <div className="row">
+                                    <div className="col-md-12 form-group p-2">
+                                        <input type="text" className="form-control " name="name" id="name" placeholder="Your name" />
+                                    </div>
+                                    </div>
+                                    <div className="row">
+                                    <div className="col-md-12 form-group p-2">
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="Email" />
+                                    </div>
+                                    </div>
+                                    <div className="row">
+                                    <div className="col-md-12 form-group p-2">
+                                        <input className="text" class="form-control" name="subject" id="subject" placeholder="Subject" />
+                                    </div>
+                                    </div>
+                                    <div className="row">
+                                    <div className="col-md-12 form-group p-2">
+                                        <textarea className="form-control" name="message" id="message" cols="30" rows="7" placeholder="Write your message"></textarea>
+                                    </div>
+                                    </div>  
+                                    <div className="row">
+                                    <div className="col-12 p-2">
+                                        <button role="submit" className="btn btn-sm btn-primary" aria-label='submit'>Send Message</button>
+                                    <span className="submitting"></span>
+                                    </div>
+                                    </div>
+                                </form>
+
+                                <div id="form-message-warning mt-4"></div> 
+                                <div id="form-message-success">
+                                    Your message was sent, thank you!
+                                </div>
+                                </div>
                         </div>
                     </div>
                 </section>
