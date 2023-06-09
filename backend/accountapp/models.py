@@ -33,12 +33,15 @@ class UserManager(BaseUserManager):
         return user
 
 
-class CustomUser(AbstractBaseUser):
+class Profile(AbstractBaseUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, max_length=7)
     email = models.EmailField(verbose_name='email', max_length=255, unique=True, null=True)
     first_name = models.CharField(verbose_name='first name', max_length=255)
     last_name = models.CharField(verbose_name='last name', max_length=255)
-
+    profile_img = models.ImageField(default="", null=True, blank=True)
+    phone=models.IntegerField(verbose_name="Phone number of the Company", max_length=11, null=False, blank=False,
+                              default="12345678912")
+    address = models.TextField(verbose_name="Address of the Company", null=False, blank=False)
     date_joined = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
     last_login = models.DateTimeField(verbose_name='last login', auto_now=True)
     is_staff = models.BooleanField(default=False)
