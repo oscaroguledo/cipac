@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Store from "./pages/Store";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
+import Profile from "./pages/account/Profile";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route exact path="/services" element={<Services/>} ></Route>
               <Route exact path="/store" element={<Store/>} ></Route>
               <Route exact path="/contact" element={<Contact/>} ></Route>
+              <Route exact path="/profile" element={<Contact/>} ></Route>
           </Routes>
           <Footer />
       </Router>
