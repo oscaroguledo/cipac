@@ -22,5 +22,8 @@ from baseapp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", index, name="index"),
-    path('about/', AboutView.as_view(), name="about page")
+    path('about/', getAbout.as_view(), name="about page"),
+    path('post_about/', postAbout.as_view(), name="post about page"),
+    path('edit_about/', editAbout.as_view(), name="edit about page"),
+    path('service/', ServiceView.as_view(), name="service page")
 ]

@@ -15,25 +15,68 @@ from .serializers import *
 def index(request):
     return render(request, "build/index.html")
 
-class AboutView(APIView):
-    
+##about api starts here----------------------------------------------------------
+@method_decorator(csrf_exempt, name='dispatch')
+class getAbout(APIView): 
     serializer_class = AboutSerializer
-  
     def get(self, request):
         detail = {"company_name": About.objects.all().first().company_name,
                     "history": About.objects.all().first().history,
-                    "about": About.objects.all().first().about}
-        print(detail)
-        return Response([detail], status=status.HTTP_200_OK)
-  
+                    "about": About.objects.all().first().about,
+                    "motto": About.objects.all().first().motto,
+                    "slogan": About.objects.all().first().slogan,
+                    "email": About.objects.all().first().email,
+                    "phone": About.objects.all().first().phone,
+                    "history": About.objects.all().first().history,
+                    "address": About.objects.all().first().address}
+        #print(detail)
+        #return Response(detail, status=status.HTTP_200_OK)
+        if detail:
+            return Response({"message": "About Page details.", "response": detail},
+                            status=status.HTTP_200_OK)
+        else:
+            return Response({"message": "There is no detail", "response": detail},
+                            status=status.HTTP_204_NO_CONTENT)
+
+
+@method_decorator(csrf_exempt, name='dispatch')   
+class postAbout(APIView): 
+    serializer_class = AboutSerializer 
     def post(self, request):
+        data = request.data
+        if data:
+            serializer = AboutSerializer(data=request.data)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save_once()
+                return  Response({"message": "successfully added about page details",
+                                  "response":serializer.data},
+                                 status=status.HTTP_201_CREATED)
+            else:
+                return Response({"message": "failed to add about page details"}, status=status.HTTP_304_NOT_MODIFIED)
+
+        else:
+            default_errors = serializer.errors
+            new_error = {}
+            for field_name, field_errors in default_errors.items():
+                new_error[field_name] = field_errors[0]
+            return Response(new_error, status=status.HTTP_400_BAD_REQUEST)
   
-        serializer = AboutSerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return  Response(serializer.data,status=status.HTTP_200_OK)
+        
+class editAbout(APIView): 
     def patch(self, request):
-        serializer = AboutSerializer(data=request.data)
+        try:
+            aboutmodel = About.objects.get(id=1)
+        except About.DoesNotExist:
+            return Response({'error': 'This about model does not exist'}, status=status.HTTP_404_NOT_FOUND)
+        serializer  =AboutSerializer(aboutmodel, data=request.data)
         if serializer.is_valid(raise_exception=True):
             serializer.save()
-            return  Response(serializer.data,status=status.HTTP_200_OK)
+            return  Response({"message": "successfully updated about page details",
+                                "response":serializer.data},
+                                status=status.HTTP_200_OK)
+        else:
+            return Response({"message": "failed to update about page details"}, status=status.HTTP_304_NOT_MODIFIED)
+
+##about api ends here----------------------------------------------------------
+class ServiceView(APIView):
+    serializer_class  = ServiceSerializer

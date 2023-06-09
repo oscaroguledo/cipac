@@ -33,16 +33,16 @@ function Header() {
                         <Link to="/" className='nav-link'>Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/About" className="nav-link">About</Link> 
+                        <Link to="/about" className="nav-link">About</Link> 
                     </li>
                     <li className="nav-item">
-                        <Link to="/Services" className='nav-link'>Services</Link>
+                        <Link to="/services" className='nav-link'>Services</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/Engineers" className='nav-link'>Find Engineers</Link>
+                        <Link to="/store" className='nav-link'>Store</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/Contact" className='nav-link'>Contact Us</Link>
+                        <Link to="/contact" className='nav-link'>Contact Us</Link>
                     </li>
                 </ul>
                 <span className="m-2">    </span>
