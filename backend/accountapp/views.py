@@ -40,7 +40,7 @@ class ProfileLogin(APIView):
         if serializer.is_valid(raise_exception=True):
             user = serializer.check_user(data)
             login(request, user)
-            return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response({"message":f" Login is successful {user}","response":serializer.data}, status=status.HTTP_200_OK)
 
 class ProfileLogout(APIView):
     def post(self, request):
@@ -50,5 +50,6 @@ class ProfileView(APIView):
     permission_classes = (permissions.AllowAny,)
     authentication_classes = (SessionAuthentication,)
     def get(self, request):
-        serializer = ProfileSerializer(request.user)
+        profile = Profile.objects.filter()
+        serializer = ProfileSerializer(profile, many=True)
         return Response({"user":serializer.data}, status=status.HTTP_200_OK)

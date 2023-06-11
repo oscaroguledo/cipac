@@ -46,9 +46,9 @@ class LoginSerializer(serializers.Serializer):
     def check_user(self, clean_data):
         user = authenticate(email=clean_data["email"], password=clean_data["password"])
         if not user:
-            raise ValidationError('User does not exist.')
+            raise ValidationError('Profile does not exist.')
         return user
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
-        model = UserModel
-        fields = ("profile_id", "email","username","first_name","last_name","profile_img","phone","address")
+        model = Profile
+        fields = ("profile_id", "email","first_name","last_name","profile_img","phone","address","is_staff")
