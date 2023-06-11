@@ -35,7 +35,7 @@ export default class Contact extends React.Component {
                                 <h3 className="heading mb-4">Let's talk about everything!</h3>
                                 <div className="row">
                                     <div className="col-md-3">
-                                        <div className="dbox w-100 text-center">
+                                        <div className="dbox w-100 text-center mb-2">
                                             <div className="icon p-1 d-flex align-items-center justify-content-center">
                                                 <span className="fas fa-location-dot"></span>
                                             </div>
@@ -45,7 +45,7 @@ export default class Contact extends React.Component {
                                         </div>
                                     </div>
                                     <div className="col-md-3">
-                                        <div className="dbox w-100 text-center">
+                                        <div className="dbox w-100 text-center mb-2">
                                             <div class="icon p-1 d-flex align-items-center justify-content-center">
                                                 <span class="fa fa-phone"></span>
                                             </div>
@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
                                         </div>
                                     </div>
                                     <div class="col-md-3">
-                                        <div class="dbox w-100 text-center">
+                                        <div class="dbox w-100 text-center mb-2">
                                             <div class="icon p-1 d-flex align-items-center justify-content-center">
                                                 <span class="fa fa-paper-plane"></span>
                                             </div>
@@ -65,7 +65,7 @@ export default class Contact extends React.Component {
                                         </div>
                                     </div>
                                     <div class="col-md-3">
-                                        <div class="dbox w-100 text-center">
+                                        <div class="dbox w-100 text-center mb-2">
                                             <div class="icon p-1 d-flex align-items-center justify-content-center">
                                                 <span class="fa fa-globe"></span>
                                             </div>
@@ -101,7 +101,7 @@ export default class Contact extends React.Component {
                                     </div>  
                                     <div className="row">
                                     <div className="col-12 p-2">
-                                        <button role="submit" className="btn btn-sm btn-primary" aria-label='submit'>Send Message</button>
+                                        <button type="submit" className="btn btn-sm btn-primary" aria-label="submit">Send Message</button>
                                     <span className="submitting"></span>
                                     </div>
                                     </div>

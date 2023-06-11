@@ -27,7 +27,7 @@ function Header() {
                         <span className="bi bi-list ms-auto" id="toggle"></span>
                     </button>
 
-                    <div className=" collapse navbar-collapse" id="navbarCollapse">
+                    <div className="collapse navbar-collapse" id="navbarCollapse">
                         <ul className="navbar-nav ms-auto mb-2 mb-md-0 p-2">
                             <li className="nav-item p-1">
                                 <Link to="/" className='nav-link'> Home</Link>
@@ -52,7 +52,7 @@ function Header() {
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li>
-                                        <a className="dropdown-item" href="/">My profile</a>
+                                        <a className="dropdown-item" href="/account/profile:profile_id">My profile</a>
                                     </li>
                                     <li>
                                         <a className="dropdown-item" href="/">Settings</a>
@@ -64,12 +64,13 @@ function Header() {
                             </li>
                         </ul>
                         <span className="m-2">    </span>
-                        <form className=" d-flex ml-1 mr-0 search bg-white" role="search">
+                        <form className="d-flex ml-1 mr-2 search bg-white" role="search">
                             <input className="form-control enter-search" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-outline search border-0 text-dark" type="submit">
-                                <i className="bi bi-search ms-auto"></i>
+                                <i className="fa fa-search ms-auto"></i>
                             </button>
                         </form>
+                        <span className="m-2">    </span>
                     </div>
                 </div>
             </nav>

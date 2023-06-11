@@ -22,6 +22,7 @@ export default class About extends React.Component {
                     message:data.message
                 }
             );
+            
           })
       }
 
@@ -32,7 +33,7 @@ export default class About extends React.Component {
                     <div className="container" data-aos="fade-up">
 
                         <div className="section-title mt-4">
-                        {this.state.about.map(about =><h2 key=''>About {about.company_name}</h2>)}
+                            {this.state.about.map(about =><h2 key=''>About {about.company_name}</h2>)}
                         </div>
 
                         <div className="row content">

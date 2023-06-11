@@ -22,7 +22,7 @@ function App() {
               <Route exact path="/services" element={<Services/>} ></Route>
               <Route exact path="/store" element={<Store/>} ></Route>
               <Route exact path="/contact" element={<Contact/>} ></Route>
-              <Route exact path="/profile" element={<Contact/>} ></Route>
+              <Route exact path="/account/profile:profile_id" element={<Profile/>} ></Route>
           </Routes>
           <Footer />
       </Router>

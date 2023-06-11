@@ -9,8 +9,8 @@ export default class Profile extends React.Component {
     
       componentDidMount() {
         let data;
-        axios.get(`http://127.0.0.1:8000/about`)
-          .then(res => {
+        axios.get(`http://127.0.0.1:8000/account/profile/:profile_id`)
+            .then(res => {
             data = res.data;
             this.setState(
                 { 
@@ -28,7 +28,7 @@ export default class Profile extends React.Component {
                     <div className="container" data-aos="fade-up">
 
                         <div className="section-title mt-4">
-                        {this.state.about.map(about =><h2 key=''>About {about.company_name}</h2>)}
+                            {this.state.about.map(about =><h2 key=''>About {about.company_name}</h2>)}
                         </div>
 
                         <div className="row content">

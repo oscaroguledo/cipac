@@ -77,6 +77,9 @@ p.text-small{
 .navbar{
   background-color:  #1E1E1E;
 }
+.navbar-brand{
+  margin-left: 16px;
+}
 .navbar div.show{
     border-top: 1px solid #3c3b41;/* dark color--- */
  }
@@ -127,15 +130,24 @@ input.form-control{
     outline: none !important;
     height: 50px; 
 }
+input:focus,
+input.form-control:active,
+input.form-control:focus{
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border:1px solid transparent;
+  
+}
 textarea.form-control{
   border:1px solid transparent;
   border-radius:20px;
   outline: none !important;
   height: 130px; 
 }
-input:focus,
-input.form-control:active,
-input.form-control:focus, 
+
 textarea.focus,
 textarea.form-control:active,
 textarea.form-control:focus{
@@ -145,6 +157,7 @@ textarea.form-control:focus{
     /* -moz-box-shadow: none;
     -webkit-box-shadow: none; */
     border:1px solid #F7DF0D;
+    
 }
 
 a.btn,
@@ -152,7 +165,7 @@ button.btn,
 button.btn:focus,
 button.btn:active{
   color:white;
-  font-size: 40px;
+  font-size:40px;
   border:0px;
   
 }
@@ -162,12 +175,15 @@ a.btn:hover{
   color:white;
 }
 button.search{
+   font-size:large;
     border-radius:20px;
     border:1px solid #F7DF0D;
-    font-size:large;
 }
-button.search:hover{
+button.search:hover,
+button.search:focus,
+button.search:active{
     border:1px solid #F7DF0D;
+    font-size:large;
     border-radius:20px;
     color:white;
 }

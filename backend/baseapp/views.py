@@ -20,6 +20,7 @@ def index(request):
 class getAbout(APIView): 
     serializer_class = AboutSerializer
     def get(self, request):
+        
         detail = {"company_name": About.objects.all().first().company_name,
                     "history": About.objects.all().first().history,
                     "about": About.objects.all().first().about,
