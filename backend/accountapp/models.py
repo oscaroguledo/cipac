@@ -29,7 +29,6 @@ class UserManager(BaseUserManager):
 
 
 class Profile(AbstractBaseUser, PermissionsMixin):
-    profile_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, max_length=7)
     email = models.EmailField(verbose_name='email', max_length=255, unique=True)
     first_name = models.CharField(verbose_name='first name', max_length=255)
     last_name = models.CharField(verbose_name='last name', max_length=255)
@@ -39,7 +38,7 @@ class Profile(AbstractBaseUser, PermissionsMixin):
     address = models.TextField(verbose_name="Address of the Company", null=False, blank=False)
     date_joined = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
     last_login = models.DateTimeField(verbose_name='last login', auto_now=True)
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
 

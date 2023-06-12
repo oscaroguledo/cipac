@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'accountapp.apps.AccountappConfig',
     'corsheaders',
     'rest_framework',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -94,9 +95,15 @@ REST_FRAMEWORK={
         "rest_framework.permissions.IsAuthenticated",
     ),
     "DEFAULT_AUTHENTICATION_CLASSES":(
-        "rest_framework.authentication.SessionAuthentication",
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
+from datetime import timedelta
+
+#SIMPLE_JWT = {
+   # 'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    #'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+  #}
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -145,3 +152,11 @@ REST_FRAMEWORK={
 }
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
+
+# SMTP CONFIGURATION
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "oscarchiagoziem@gmail.com"
+EMAIL_HOST_PASSWORD = "ihkqjckjevbpwgkk"
