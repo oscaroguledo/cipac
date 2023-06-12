@@ -5,12 +5,12 @@ from django.shortcuts import render
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import get_user_model, login, logout
-from rest_framework import generics, permissions, status
+from rest_framework import generics,status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 #from rest_framework.authentication import SessionAuthentication
 from . models import Profile
-from .serializers import ProfileSerializer, RegisterSerializer, LoginSerializer
+from .serializers import RegisterSerializer #, ProfileSerializer, LoginSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 from .utils import Util
 from django.contrib.sites.shortcuts import get_current_site
@@ -18,7 +18,6 @@ from django.urls import reverse
 
 # Create your views here.
 class ProfileRegister(generics.GenericAPIView):
-    permission_classes = (permissions.AllowAny,)
     queryset = Profile.objects.all()
     serializer_class = RegisterSerializer
     def post(self, request):
@@ -52,10 +51,8 @@ class VerifyEmail(generics.GenericAPIView):
         pass
     
 """
-
 class ProfileLogin(APIView):
     permission_classes = (permissions.AllowAny,)
-    authentication_classes = (SessionAuthentication,)
     def post(self, request):
         data = request.data
         print("kfkkfkfkgks")
@@ -70,10 +67,10 @@ class ProfileLogout(APIView):
         logout(request)
         return Response({"message":"You have been logged out"},status=status.HTTP_200_OK)"""
 
-class ProfileView(APIView):
+"""class ProfileView(APIView):
     permission_classes = (permissions.AllowAny,)
     #authentication_classes = (SessionAuthentication,)
     def get(self, request):
         profile = Profile.objects.filter()
         serializer = ProfileSerializer(profile, many=True)
-        return Response({"user":serializer.data}, status=status.HTTP_200_OK)
+        return Response({"user":serializer.data}, status=status.HTTP_200_OK)"""

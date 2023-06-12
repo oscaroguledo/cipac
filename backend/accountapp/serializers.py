@@ -39,7 +39,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
-class LoginSerializer(serializers.Serializer):
+"""class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField(required=False, allow_blank=True)
     password = serializers.CharField(style={'input_type': 'password'})
 
@@ -51,4 +51,4 @@ class LoginSerializer(serializers.Serializer):
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = ("id", "email","first_name","last_name","profile_img","phone","address","is_staff")
+        fields = ("id", "email","first_name","last_name","profile_img","phone","address","is_staff")"""

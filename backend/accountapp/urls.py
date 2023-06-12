@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ProfileRegister, ProfileView, VerifyEmail
+from .views import ProfileRegister, VerifyEmail #,ProfileView, 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
