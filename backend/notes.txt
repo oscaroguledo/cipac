@@ -1,0 +1,57 @@
+API paths{
+
+    accounts{
+        api/accounts/login
+        api/accounts/register 
+        api/accounts/email_verify
+        api/accounts/profile 
+
+    }
+
+    supplies/products{
+        /api/products/
+        /api/products/<id>/
+        /api/products/create/
+        /api/products/upload/
+        
+        /api/products/<update>/<id>/
+        /api/products/delete/<id>/
+
+        /api/products/<id>/reviews/',    
+        
+    }
+
+    services{
+        api/services/
+        api/services/<id>/
+        api/services/create/
+        api/services/upload/
+        
+        api/services/update/<id>/
+        api/services/delete/<id>/
+
+        api/services/<id>/reviews/', 
+    }
+
+    orders{
+
+    }
+
+    engineers{
+        api/engineers/
+        api/engineers/register
+        api/engineers/<id>
+
+        api/engineers/reviews
+        
+        api/engineers/profile
+        api/engineers/profile/update
+        api/engineers/profile/uploadimage
+
+        api/engineers/profile/delete
+    }
+
+    categories{
+        api/categories/
+    }
+}

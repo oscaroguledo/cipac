@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles', 
     'baseapp.apps.BaseappConfig',
-    'accountapp.apps.AccountappConfig',
+    # 'accountapp.apps.AccountappConfig',
     'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt',
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'frontend')],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,8 +88,8 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'accountapp.Profile'
-AUTHENTICATION_BACKENDS = ['accountapp.backends.EmailBackend']
+AUTH_USER_MODEL = 'baseapp.Profile'
+AUTHENTICATION_BACKENDS = ['baseapp.backends.EmailBackend']
 REST_FRAMEWORK={
     "DEFAULT_AUTHENTICATION_CLASSES":(
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -133,12 +133,25 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+# https://docs.djangoproject.com/en/4.2/howto/static-files/ 
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'frontend', "build", "static"),  # update the STATICFILES_DIRS
-)
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+    BASE_DIR / 'frontend/build/static',
+]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_ROOT = 'static/media' 
+
+
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'frontend', "build", "static"),  # update the STATICFILES_DIRS
+# )
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -152,8 +165,15 @@ CORS_ALLOW_CREDENTIALS = True
 
 # SMTP CONFIGURATION
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "oscarchiagoziem@gmail.com"
-EMAIL_HOST_PASSWORD = "ihkqjckjevbpwgkk"
+EMAIL_USE_TLS = True  
+EMAIL_HOST = os.environ.get ('EMAIL_HOST')   
+EMAIL_HOST_USER = os.environ.get ('EMAIL_HOST_USER')  
+EMAIL_HOST_PASSWORD = os.environ.get ('EMAIL_HOST_PASSWORD')   
+EMAIL_PORT = os.environ.get ('EMAIL_PORT') 
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = "oscarchiagoziem@gmail.com"
+# EMAIL_HOST_PASSWORD = "ihkqjckjevbpwgkk"
