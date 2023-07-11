@@ -1,5 +1,5 @@
 import json
-import requests
+# import requests
 import threading
 from django.shortcuts import render
 from django.utils.decorators import method_decorator
@@ -9,10 +9,10 @@ from rest_framework import generics,status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 #from rest_framework.authentication import SessionAuthentication
-from . models import Profile
-from .serializers import RegisterSerializer #, ProfileSerializer, LoginSerializer
+from baseapp.models import Profile
+from baseapp.serializers import RegisterSerializer #, ProfileSerializer, LoginSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
-from .utils import Util
+from baseapp.utils import Util
 from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 

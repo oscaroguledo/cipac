@@ -84,7 +84,7 @@ class About(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=200, null=True, blank=False )
     icon = models.ImageField(upload_to='icons/', null=True, blank=True, default='/icons/icon.png')
-    createdAt = models.DateTimeField(auto_now_add = True )
+    # createdAt = models.DateTimeField(auto_now_add = True )
 
     _id = models.AutoField(primary_key=True, editable=False)
 
@@ -142,7 +142,7 @@ class Service(models.Model):
 ## Review/rating model-----------------------------------------------------------------------------------
 class Review(models.Model):
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    user = models.ForeignKey(Profile, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200, null=True, blank=True)
     rating = models.IntegerField(null=True, blank=True, default=0)
     comment = models.TextField(null=True, blank=True)

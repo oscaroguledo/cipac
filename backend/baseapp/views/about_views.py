@@ -1,5 +1,5 @@
 import json
-import requests
+# import requests
 import threading
 from django.shortcuts import render
 from django.utils.decorators import method_decorator
